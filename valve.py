@@ -29,6 +29,10 @@ class Valve:
         """Verifies if the valve is currently ON"""
         return self.line.value == 1
 
+    def info_max_current(self):
+        """Maximum current required for operation"""
+        return self.specifications['mAcurrent']
+
     def info(self):
         """Prints out the hardware characteristics of the current valve"""
         print(self.specifications)
