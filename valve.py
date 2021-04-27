@@ -9,8 +9,8 @@ class Valve:
     specifications such as pipe diameter, operational AC current, etc.
     """
     models = [
-            {'model': 'CP075', 'brand': 'RainBird', 'thread': 0.75, 'mAcurrent': 250},
-            {'model': 'CPF075', 'brand': 'RainBird', 'thread': 0.75, 'mAcurrent': 300}
+            {'model': 'CP075', 'brand': 'RainBird', 'thread': 0.75, 'acVolt': 24, 'mAcurrent': 250},
+            {'model': 'CPF075', 'brand': 'RainBird', 'thread': 0.75, 'acVolt': 24, 'mAcurrent': 300}
             ]
     def __init__(self, model, gpioPort):
         self.specifications = next((specs for specs in self.models if specs["model"] == model), None)
