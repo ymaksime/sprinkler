@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from gpiozero import OutputDevice
 
@@ -16,7 +16,8 @@ class PowerSupply:
             ]
 
     def __init__(self, model, gpioPort):
-        self.specifications = next((specs for specs in self.models if specs["model"] == model), None)
+        self.specifications = next((specs for specs in self.models if \
+                specs["model"] == model), None)
         assert self.specifications != None, "No such power supply model exist"
         self.line = OutputDevice(gpioPort)
 
