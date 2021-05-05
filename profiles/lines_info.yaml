@@ -1,0 +1,29 @@
+---
+# Each water line is sitting on a designated valve
+# # There could be multiple outputs (sprinkler heads) on a single line
+# The values are given in gallons per minutes for each output
+line1:
+    outputs:
+        - 1.0
+        - 1.2
+        - 0.5
+line2:
+    outputs:
+        - 0.7
+        - 0.2
+        - 0.1
+line3:
+    outputs:
+        - 0.3
+        - 0.9
+        - 0.85
+line4:
+    outputs:
+        - 0.5
+        - 1.2
+        - 1.0
+line5:
+    outputs:
+        - 1.3
+        - 1.1
+        - 0.4

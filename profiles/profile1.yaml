@@ -1,0 +1,44 @@
+---
+time_begine: "00:00:01"
+# Each sprinkler system branch (line) has the following members
+# duration: (in minutes) for how long this branch should stay open
+# gallons: total gallons used. Recorded after the irrigation
+# time_start: recorded after irrigation
+# time_end: recorded after irrigation
+# gpm: (gallons per minutes) calculated after irrigation
+# The last four members are used by the system for recording and data logging
+branch1:
+    duration: 30
+    gallons: 0
+    time_start: "00:00:00"
+    time_end: "00:00:00"
+    gpm: 3.4
+
+branch2:
+    duration: 20
+    gallons: 0
+    time_start: "00:00:00"
+    time_end: "00:00:00"
+    gpm: 3.4
+
+branch3:
+    duration: 10
+    gallons: 0
+    time_start: "00:00:00"
+    time_end: "00:00:00"
+    gpm: 3.4
+
+branch4:
+    duration: 40
+    gallons: 0
+    time_start: "00:00:00"
+    time_end: "00:00:00"
+    gpm: 3.4
+
+branch5:
+    duration: 60
+    gallons: 0
+    time_start: "00:00:00"
+    time_end: "00:00:00"
+    gpm: 3.4
+
