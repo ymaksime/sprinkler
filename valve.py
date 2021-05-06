@@ -15,7 +15,7 @@ class Valve:
             {'model': 'CP075', 'brand': 'RainBird', 'thread': 0.75, 'acVolt': 24, 'mAcurrent': 250},
             {'model': 'CPF075', 'brand': 'RainBird', 'thread': 0.75, 'acVolt': 24, 'mAcurrent': 300}
             ]
-    def __init__(self, model, gpioPort):
+    def __init__(self, model, gpioPort, name):
         self.specifications = next((specs for specs in self.models if specs["model"] == model), None)
         assert self.specifications != None, "No such sprinkler model exist"
         self.line = OutputDevice(gpioPort)
