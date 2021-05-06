@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
+import logging
 from gpiozero import OutputDevice
+
+valve_logger = logging.getLogger('Valve')
 
 class Valve:
     """This is a class for a single inline valve and all associated hardware
@@ -16,14 +19,19 @@ class Valve:
         self.specifications = next((specs for specs in self.models if specs["model"] == model), None)
         assert self.specifications != None, "No such sprinkler model exist"
         self.line = OutputDevice(gpioPort)
+        self.name = name
+        valve_logger.debug('Created %s valve', self.name)
+        self.info()
 
     def on(self):
         """Turns ON this valve"""
+        valve_logger.info('Turned ON the %s valve', self.name)
         self.line.on()
 
     def off(self):
         """Turns OFF this valve"""
         self.line.off()
+        valve_logger.info('Turned OFF the %s valve', self.name)
 
     def is_active(self):
         """Verifies if the valve is currently ON"""
@@ -35,4 +43,4 @@ class Valve:
 
     def info(self):
         """Prints out the hardware characteristics of the current valve"""
-        print(self.specifications)
+        valve_logger.info(self.specifications)
